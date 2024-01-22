@@ -1,10 +1,15 @@
 {
   "preset": "jest-expo",
+  "bail": true,
   "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"],
   "transformIgnorePatterns": [
     "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
   ],
-  "testPathIgnorePatterns": ["./__tests__/mocks", "./__tests__/utils"],
+  "testPathIgnorePatterns": [
+    "./__tests__/mocks",
+    "./__tests__/utils",
+    "./__tests__/coverage"
+  ],
   "setupFiles": [
     "./__tests__/mocks/libs/async-storage.ts",
     "./__tests__/mocks/libs/react-native-safe-area-context.ts"
